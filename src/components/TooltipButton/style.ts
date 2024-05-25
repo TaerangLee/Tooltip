@@ -19,6 +19,7 @@ export const TooltipButton = styled.button<TooltipProps>`
   padding: 2px 0;
   border-radius: 5px;
   font-size: 15px;
+  z-index: 1;
 
   &:hover {
     background-color: white;
@@ -51,12 +52,24 @@ export const TooltipButton = styled.button<TooltipProps>`
   }
 `;
 
-export const ContentWrapper = styled.div<{ direction: string | undefined }>`
-  position: relative;
+export const ContentWrapper = styled.div<{
+  direction?: string;
+  width?: string;
+}>`
+  position: absolute;
   bottom: ${(props) =>
     props.direction === "Left" || props.direction === "Right"
       ? "17px"
       : props.direction === "LB" || props.direction === "RB"
       ? "34px"
       : 0};
+  z-index: 10;
+
+  transform: ${(props) =>
+    props.width === "long" &&
+    (props.direction === "Top" || props.direction === "TR")
+      ? props.direction === "Top"
+        ? "translateX(40px)"
+        : "translateX(80px)"
+      : "none"};
 `;
