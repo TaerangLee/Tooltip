@@ -5,6 +5,7 @@ export const ContentWrapper = styled.div<{
   sideDirection: string | undefined;
 }>`
   width: 70px;
+  z-index: 2;
   background-color: #1a2735;
   border-radius: 5px;
   display: flex;
@@ -18,8 +19,7 @@ export const ContentWrapper = styled.div<{
       ? "translateX(-80px) translateY(-20px)"
       : props.direction === "R"
       ? "translateX(80px) translateY(-20px)"
-      : "translateY(-80px)"}; 
-
+      : "translateY(-80px)"};
 `;
 
 export const ContentContainer = styled.div`

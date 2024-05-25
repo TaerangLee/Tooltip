@@ -15,7 +15,7 @@ const Content = ({ direction }: { direction: string | undefined }) => {
           <span>prompt text</span>
           <span>prompt text</span>
         </S.ContentContainer>
-        <Direction direction={direction} directionSlice={directionSlice}/>
+        <Direction direction={direction} directionSlice={directionSlice} />
       </S.ContentWrapper>
     </>
   );
