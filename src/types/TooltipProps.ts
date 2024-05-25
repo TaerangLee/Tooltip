@@ -3,4 +3,7 @@ export interface TooltipProps {
   width?: "long";
   color?: string;
   direction?: string;
+  number?: number;
+  type?: "enter-delay" | "leave-delay";
+  content?: "check";
 }
