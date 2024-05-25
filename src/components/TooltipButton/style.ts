@@ -1,10 +1,17 @@
 import styled from "@emotion/styled";
 import { TooltipProps } from "../../types/TooltipProps";
 
+export const TooltipButtonWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
 export const TooltipButton = styled.button<TooltipProps>`
   position: relative;
   background: ${(props) => props.color || "#1aab8a"};
+  transition: background 0.5s ease;
   width: ${(props) => (props.width === "long" ? "150px" : "70px")};
+  height: 20px;
   color: white;
   border: none;
   cursor: pointer;
@@ -42,4 +49,14 @@ export const TooltipButton = styled.button<TooltipProps>`
   &:hover::after {
     width: 100%;
   }
+`;
+
+export const ContentWrapper = styled.div<{ direction: string | undefined }>`
+  position: relative;
+  bottom: ${(props) =>
+    props.direction === "Left" || props.direction === "Right"
+      ? "17px"
+      : props.direction === "LB" || props.direction === "RB"
+      ? "34px"
+      : 0};
 `;
