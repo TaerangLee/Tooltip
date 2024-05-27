@@ -10,3 +10,4 @@ export { default as Section4 } from "./Section4";
 export { default as Section5 } from "./Section5";
 export { default as Section6 } from "./Section6";
 export { default as ExplainContainer } from "./ExplainContainer";
+export { default as Portal } from "./Portal";
