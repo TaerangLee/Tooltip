@@ -17,9 +17,9 @@ export const CheckoutContentWrapper = styled.div<{ direction?: string }>`
     props.direction === "B"
       ? "translateY(10px) translateX(-100px)"
       : props.direction === "L"
-      ? "translateX(-300px) translateY(-30px)"
+      ? "translateX(-285px) translateY(-32px)"
       : props.direction === "R"
-      ? "translateX(90px) translateY(-30px)"
+      ? "translateX(80px) translateY(-32px)"
       : "translateY(-110px) translateX(-100px)"};
 `;
 

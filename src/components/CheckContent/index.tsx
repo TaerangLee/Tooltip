@@ -23,9 +23,8 @@ const CheckoutContent = ({
     >
       <S.CheckoutContentContainer>
         <S.ContentContainer>
-        
-            <IIcon />
-        
+          <IIcon />
+
           <span>Are you sure to delete this task?</span>
         </S.ContentContainer>
         <S.CheckContainer>
