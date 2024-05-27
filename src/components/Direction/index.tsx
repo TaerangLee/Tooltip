@@ -1,26 +1,39 @@
 import React from "react";
-
 import * as S from "./style";
-import { CheckContent, TooltipPosition } from "../../types/Direction";
+import {
+  CheckContentPosition,
+  ColorContentPosition,
+  TooltipPosition,
+} from "../../types/Direction";
 
 const Direction = ({
   direction,
   directionSlice,
   contentType,
+  color,
 }: {
-  direction: string | undefined;
-  directionSlice: string | undefined;
+  direction?: string;
+  directionSlice?: string;
   contentType?: string;
+  color?: string;
 }) => {
-  const positions = contentType === "check" ? CheckContent : TooltipPosition;
+  const positions = contentType
+    ? contentType === "check"
+      ? CheckContentPosition
+      : ColorContentPosition
+    : TooltipPosition;
+
   const x = direction && positions[direction]?.x;
   const y = direction && positions[direction]?.y;
 
-  console.log(x);
-  console.log(y);
-
   return (
-    <S.Direction x={x} y={y} directionSlice={directionSlice} content={contentType} />
+    <S.Direction
+      x={x}
+      y={y}
+      directionSlice={directionSlice}
+      content={contentType}
+      color={color}
+    />
   );
 };
 

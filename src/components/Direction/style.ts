@@ -4,15 +4,22 @@ export const Direction = styled.div<{
   directionSlice?: string;
   x?: string;
   y?: string;
+  color?: string;
   content?: string;
 }>`
   position: absolute;
+  pointer-events: none;
   width: 0;
   height: 0;
   border-bottom: 5px solid transparent;
   border-top: 5px solid transparent;
   border-left: 5px solid
-    ${(props) => (props.content === "check" ? "white" : "#1a2735")};
+    ${(props) =>
+      props.content
+        ? props.content === "check"
+          ? "white"
+          : props.color
+        : "#1a2735"};
   border-right: 5px solid transparent;
 
   transform: ${({ x, y, directionSlice }) =>
