@@ -3,23 +3,24 @@ import { TooltipProps } from "../../types/TooltipProps";
 
 export const TooltipButtonWrapper = styled.div`
   position: relative;
-  display: inline-block;
 `;
 
-export const TooltipButton = styled.button<TooltipProps>`
+export const TooltipButton = styled.button<TooltipProps & { isClick: boolean }>`
   position: relative;
   background: ${(props) => props.color || "#1aab8a"};
   transition: background 0.5s ease;
-  width: ${(props) => (props.width === "long" ? "150px" : "70px")};
+  min-width: 70px;
+  width: ${(props) => (props.width === "long" ? "150px" : "auto")};
   height: 20px;
-  color: white;
+  color: ${(props) => (props.fontColor ? props.fontColor : "#ffffff")};
   border: none;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   padding: 2px 0;
   border-radius: 5px;
-  font-size: 15px;
+  font-size: 14px;
   z-index: 1;
+  opacity: ${(props) => (props.isClick ? "40%" : "none")};
 
   &:hover {
     background-color: white;
@@ -27,7 +28,7 @@ export const TooltipButton = styled.button<TooltipProps>`
   }
 
   &::before,
-  ::after {
+  &::after {
     content: "";
     position: absolute;
     height: 2px;
@@ -49,10 +50,16 @@ export const TooltipButton = styled.button<TooltipProps>`
   &:hover::before,
   &:hover::after {
     width: 100%;
+    position: absolute;
   }
 `;
 
-export const ContentWrapper = styled.div<{
+export const ContainerWrapper = styled.div<{ content?: string }>`
+  position: ${(props) => (props.content === "scroll" ? "fixed" : "relative")};
+  z-index: 3;
+`;
+
+export const ContentContainer = styled.div<{
   direction?: string;
   width?: string;
 }>`
@@ -63,7 +70,7 @@ export const ContentWrapper = styled.div<{
       : props.direction === "LB" || props.direction === "RB"
       ? "34px"
       : 0};
-  z-index: 10;
+  z-index: 100;
 
   transform: ${(props) =>
     props.width === "long" &&
