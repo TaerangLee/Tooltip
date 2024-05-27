@@ -1,16 +1,9 @@
 import React from "react";
 import * as S from "./style";
 import Direction from "../Direction";
+import { ColorContentProps } from "../../types/ColorContentProps";
 
-const ColorContent = ({
-  fontColor,
-  children,
-  color,
-}: {
-  fontColor?: string;
-  children: string;
-  color?: string;
-}) => {
+const ColorContent = ({ fontColor, children, color }: ColorContentProps) => {
   return (
     <S.ContentColorWrapper>
       <S.ContentContainer fontColor={fontColor} color={color}>

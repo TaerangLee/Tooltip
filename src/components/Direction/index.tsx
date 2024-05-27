@@ -5,18 +5,14 @@ import {
   ColorContentPosition,
   TooltipPosition,
 } from "../../types/Direction";
+import { DirectionProps } from "../../types/DirectionProps";
 
 const Direction = ({
   direction,
   directionSlice,
   contentType,
   color,
-}: {
-  direction?: string;
-  directionSlice?: string;
-  contentType?: string;
-  color?: string;
-}) => {
+}: DirectionProps) => {
   const positions = contentType
     ? contentType === "check"
       ? CheckContentPosition

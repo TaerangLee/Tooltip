@@ -2,14 +2,9 @@ import React from "react";
 
 import * as S from "./style";
 import Direction from "../Direction";
+import { ContentProps } from "../../types/ContentProps";
 
-const Content = ({
-  direction,
-  type,
-}: {
-  direction?: string;
-  type?: string;
-}) => {
+const Content = ({ direction, type }: ContentProps) => {
   const directionSlice = direction?.slice(0, 1);
 
   return (

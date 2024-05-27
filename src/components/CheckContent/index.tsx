@@ -3,16 +3,13 @@ import * as S from "./style";
 import { IIcon } from "../../assets";
 import { toast } from "react-toastify";
 import Direction from "../Direction";
+import { CheckoutContentProps } from "../../types/CheckoutContentProps";
 
 const CheckoutContent = ({
   direction,
   onMouseEnter,
   onMouseLeave,
-}: {
-  direction: string | undefined;
-  onMouseEnter: () => void;
-  onMouseLeave: () => void;
-}) => {
+}: CheckoutContentProps) => {
   const directionSlice = direction?.slice(0, 1);
 
   return (
