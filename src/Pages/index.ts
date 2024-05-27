@@ -1,1 +1,1 @@
-export { default as  TooltipButton } from './TooltipPage'
+export { default as TooltipPage } from "./TooltipPage";
