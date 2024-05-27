@@ -6,7 +6,7 @@ import Section1 from "../Section1";
 const Section2 = () => {
   return (
     <S.Section2Wrapper>
-      <Section1 />
+      <Section1 scroll="scroll" />
     </S.Section2Wrapper>
   );
 };

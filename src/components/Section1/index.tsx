@@ -5,53 +5,54 @@ import { TooltipDirection } from "../../types/Direction";
 
 import TooltipButton from "../TooltipButton";
 
-const Section1 = () => {
-  // 기본 방향은 Top으로 설정이 되어있어 props를 따로 안 넘겨도 됨
+const Section1 = ({ scroll }: { scroll?: "scroll" }) => {
+  const isScroll = scroll;
+
   return (
     <S.Section1Wrapper>
       <S.TopBottomContainer>
-        <TooltipButton direction={TooltipDirection.TL}>
+        <TooltipButton direction={TooltipDirection.TL} content={scroll}>
           {TooltipDirection.TL}
         </TooltipButton>
-        <TooltipButton direction={TooltipDirection.Top}>
+        <TooltipButton direction={TooltipDirection.Top} content={scroll}>
           {TooltipDirection.Top}
         </TooltipButton>
-        <TooltipButton direction={TooltipDirection.TR}>
+        <TooltipButton direction={TooltipDirection.TR} content={isScroll}>
           {TooltipDirection.TR}
         </TooltipButton>
       </S.TopBottomContainer>
       <S.SideContainer>
         <S.LeftRightSide className="LeftOnly">
-          <TooltipButton direction={TooltipDirection.LT}>
+          <TooltipButton direction={TooltipDirection.LT} content={isScroll}>
             {TooltipDirection.LT}
           </TooltipButton>
-          <TooltipButton direction={TooltipDirection.Left}>
+          <TooltipButton direction={TooltipDirection.Left} content={isScroll}>
             {TooltipDirection.Left}
           </TooltipButton>
-          <TooltipButton direction={TooltipDirection.LB}>
+          <TooltipButton direction={TooltipDirection.LB} content={isScroll}>
             {TooltipDirection.LB}
           </TooltipButton>
         </S.LeftRightSide>
         <S.LeftRightSide>
-          <TooltipButton direction={TooltipDirection.RT}>
+          <TooltipButton direction={TooltipDirection.RT} content={isScroll}>
             {TooltipDirection.RT}
           </TooltipButton>
-          <TooltipButton direction={TooltipDirection.Right}>
+          <TooltipButton direction={TooltipDirection.Right} content={isScroll}>
             {TooltipDirection.Right}
           </TooltipButton>
-          <TooltipButton direction={TooltipDirection.RB}>
+          <TooltipButton direction={TooltipDirection.RB} content={isScroll}>
             {TooltipDirection.RB}
           </TooltipButton>
         </S.LeftRightSide>
       </S.SideContainer>
       <S.TopBottomContainer>
-        <TooltipButton direction={TooltipDirection.BL}>
+        <TooltipButton direction={TooltipDirection.BL} content={isScroll}>
           {TooltipDirection.BL}
         </TooltipButton>
-        <TooltipButton direction={TooltipDirection.Bottom}>
+        <TooltipButton direction={TooltipDirection.Bottom} content={isScroll}>
           {TooltipDirection.Bottom}
         </TooltipButton>
-        <TooltipButton direction={TooltipDirection.BR}>
+        <TooltipButton direction={TooltipDirection.BR} content={isScroll}>
           {TooltipDirection.BR}
         </TooltipButton>
       </S.TopBottomContainer>

@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const Section1Wrapper = styled.div`
   width: 360px;
-  height: 105px;
+  height: 110px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,6 +22,7 @@ export const SideContainer = styled.div`
 export const LeftRightSide = styled.div`
   display: flex;
   gap: 3px;
+
   flex-direction: column;
 
   .LeftOnly {
