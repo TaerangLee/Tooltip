@@ -28,9 +28,13 @@ export const TooltipPosition: { [key: string]: { x: string; y: string } } = {
   LT: { x: "40", y: "-17" },
 };
 
-export const CheckContent: { [key: string]: { x: string; y: string } } = {
+export const CheckContentPosition: { [key: string]: { x: string; y: string } } = {
   Top: { x: "0", y: "44" },
   Right: { x: "-142", y: "0" },
   Bottom: { x: "0", y: "-44" },
   Left: { x: "142", y: "0" },
+};
+
+export const ColorContentPosition: { [key: string]: { x: string; y: string } } = {
+  Top: { x: "0", y: "13" },
 };

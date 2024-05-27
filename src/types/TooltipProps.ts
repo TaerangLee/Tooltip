@@ -5,5 +5,6 @@ export interface TooltipProps {
   direction?: string;
   number?: number;
   type?: "enter-delay" | "leave-delay";
-  content?: "check";
+  content?: "check" | "color" | "able" | "scroll";
+  fontColor?: string;
 }
