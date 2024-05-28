@@ -3,7 +3,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import "./App.css";
 
-import { TooltipPage } from "pages";
+import { TooltipPage } from "PageContainer";
 
 function App() {
   return (
