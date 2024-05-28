@@ -102,7 +102,8 @@ https://github.com/TaerangLee/Tooltip/assets/106226701/e171405e-ced8-414b-bc02-8
 
 이번 Section5는 색깔이 관한 Tooltip 컴포넌트입니다.<br/>
 기본적으로 color와 fontColor를 다양하게 설정하고 싶은 색으로 지정을 해주면 됩니다. 기본 방향은 Top 방향입니다. 그리고 설정한 세부 내용인 `React.ReactNode` 내용이 Tooltip 컴포너트 내용과 ColorContent안에 나타나게 됩니다.
-![Alt text](image-3.png)
+<img width="560" alt="image" src="https://github.com/TaerangLee/Tooltip/assets/106226701/8ab6d629-da6f-4adf-bde5-70af62494094">
+
 
 > font-color를 black과 base color를 `#fff1aa`설정했습니다.
 > Direction은 colorContent일 때는 그림자 효과를 적용시킵니다.
