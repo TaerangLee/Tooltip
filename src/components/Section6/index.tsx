@@ -4,18 +4,31 @@ import * as S from "./style";
 import TooltipButton from "../TooltipButton";
 import ExplainContainer from "../ExplainContainer";
 
+type WordType = "Disable" | "Enable";
+
 const Section6 = () => {
   const [isHover, setisHover] = useState<boolean>(false);
+  const [isClick, setIsClick] = useState<boolean>(false);
+  const [word, setWord] = useState<WordType>("Disable");
 
-  const handleMouse = () => {
-    setisHover((prevIsClick) => !prevIsClick);
-  };
   return (
     <S.Section6Wrapper>
-      <TooltipButton color="#333333" content="able">
-        Disable
+      <TooltipButton
+        color="#333333"
+        content="able"
+        isClick={isClick}
+        onClick={() => {
+          setIsClick((prevIsClick) => !prevIsClick);
+          setWord(isClick ? "Disable" : "Enable");
+        }}
+      >
+        {word}
       </TooltipButton>
-      <ExplainContainer onMouse={handleMouse} isHover={isHover} />
+      <ExplainContainer
+        onMouse={() => setisHover((prevIsHover) => !prevIsHover)}
+        isHover={isHover}
+        albeWord={word}
+      />
     </S.Section6Wrapper>
   );
 };

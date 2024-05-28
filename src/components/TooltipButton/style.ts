@@ -5,7 +5,7 @@ export const TooltipButtonWrapper = styled.div`
   position: relative;
 `;
 
-export const TooltipButton = styled.button<TooltipProps & { isClick: boolean }>`
+export const TooltipButton = styled.button<TooltipProps & { isClick?: boolean }>`
   position: relative;
   background: ${(props) => props.color || "#1aab8a"};
   transition: background 0.5s ease;
@@ -20,7 +20,8 @@ export const TooltipButton = styled.button<TooltipProps & { isClick: boolean }>`
   border-radius: 5px;
   font-size: 14px;
   z-index: 1;
-  opacity: ${(props) => (props.isClick ? "40%" : "none")};
+  opacity: ${(props) => (props.isClick ? "40%" : "1")};
+  transition: opacity 0.8s ease;
 
   &:hover {
     background-color: white;

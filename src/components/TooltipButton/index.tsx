@@ -14,16 +14,17 @@ const TooltipButton = ({
   type,
   content,
   fontColor,
+  isClick,
+  onClick,
 }: TooltipProps) => {
   const [isHover, setIsHover] = useState<boolean>(false);
-  const [isClick, setIsClick] = useState<boolean>(false);
   const [checkHover, setCheckHover] = useState<boolean>(false);
 
   const Timeout = useRef<NodeJS.Timeout | null>(null);
 
   const handleClickContent = () => {
-    if (content === "able") {
-      setIsClick((prevIsClick) => !prevIsClick);
+    if (content === "able" && onClick) {
+      onClick();
     }
   };
 
@@ -72,8 +73,8 @@ const TooltipButton = ({
         isClick={isClick}
         onMouseEnter={handleEnterContent}
         onMouseLeave={handleLeaveContent}
-        onClick={handleClickContent}
         fontColor={fontColor}
+        onClick={handleClickContent}
       >
         {children}
       </S.TooltipButton>
