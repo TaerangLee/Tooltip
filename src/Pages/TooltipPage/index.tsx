@@ -9,8 +9,6 @@ import {
   Section6,
 } from "components";
 
-// import { TooltipDirection } from "../../types/Direction";
-
 const TooltipPage = () => {
   return (
     <S.TooltipWrapper>
