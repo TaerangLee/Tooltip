@@ -21,6 +21,7 @@ export const Direction = styled.div<{
           : props.color
         : "#1a2735"};
   border-right: 5px solid transparent;
+  z-index: -1;
 
   transform: ${({ x, y, directionSlice }) =>
     `translateX(${x}px) translateY(${y}px)` +
@@ -31,4 +32,10 @@ export const Direction = styled.div<{
       : directionSlice === "L"
       ? " rotate(0deg)"
       : " rotate(90deg)")};
+
+  ${
+    (props) =>
+      props.color &&
+      `filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));` /* 삼각형 모양에 맞춘 그림자 효과 */
+  }
 `;
