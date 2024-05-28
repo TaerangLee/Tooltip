@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./style";
-import TooltipButton from "../TooltipButton";
-import SearchIcon from "../../assets/SearchIcon";
+import { TooltipButton } from "components";
+import { SearchIcon } from "assets";
 
 const Section3 = () => {
   const [count, setCount] = useState<number>(1);

@@ -1,9 +1,7 @@
 import React, { useState, useRef } from "react";
 import * as S from "./style";
-import { TooltipProps } from "../../types/TooltipProps";
-import Content from "../Content";
-import CheckoutContent from "../CheckContent";
-import ColorContent from "../ColorContent";
+import { TooltipProps } from "types";
+import { Content, CheckoutContent, ColorContent } from "components";
 
 const TooltipButton = ({
   children,

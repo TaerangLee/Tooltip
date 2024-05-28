@@ -1,7 +1,7 @@
 import React from "react";
 
 import * as S from "./style";
-import Section1 from "../Section1";
+import { Section1 } from "components";
 
 const Section2 = () => {
   return (

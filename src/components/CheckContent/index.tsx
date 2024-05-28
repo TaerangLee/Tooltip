@@ -1,9 +1,9 @@
 import React from "react";
 import * as S from "./style";
-import { IIcon } from "../../assets";
+import { IIcon } from "assets";
 import { toast } from "react-toastify";
-import Direction from "../Direction";
-import { CheckoutContentProps } from "../../types/CheckoutContentProps";
+import { Direction } from "components";
+import { CheckoutContentProps } from "types";
 
 const CheckoutContent = ({
   direction,

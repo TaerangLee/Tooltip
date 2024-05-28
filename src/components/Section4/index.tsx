@@ -1,7 +1,7 @@
 import React from "react";
 
 import * as S from "./style";
-import TooltipButton from "../TooltipButton";
+import { TooltipButton } from "components";
 
 const Section4 = () => {
   return (

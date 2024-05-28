@@ -7,7 +7,7 @@ import {
   Section4,
   Section5,
   Section6,
-} from "../../components";
+} from "components";
 
 // import { TooltipDirection } from "../../types/Direction";
 

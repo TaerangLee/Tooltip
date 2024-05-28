@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
 import * as S from "./style";
-import TooltipButton from "../TooltipButton";
-import ExplainContainer from "../ExplainContainer";
+import { TooltipButton, ExplainContainer } from "components";
 
 type WordType = "Disable" | "Enable";
 

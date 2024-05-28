@@ -1,9 +1,9 @@
 import React from "react";
 
 import * as S from "./style";
-import { TooltipDirection } from "../../types/Direction";
+import { TooltipDirection } from "types";
 
-import TooltipButton from "../TooltipButton";
+import { TooltipButton } from "components";
 
 const Section1 = ({ scroll }: { scroll?: "scroll" }) => {
   const isScroll = scroll;

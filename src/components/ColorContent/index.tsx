@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./style";
-import Direction from "../Direction";
-import { ColorContentProps } from "../../types/ColorContentProps";
+import { Direction } from "components";
+import { ColorContentProps } from "types";
 
 const ColorContent = ({ fontColor, children, color }: ColorContentProps) => {
   return (

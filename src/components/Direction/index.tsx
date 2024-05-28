@@ -4,8 +4,8 @@ import {
   CheckContentPosition,
   ColorContentPosition,
   TooltipPosition,
-} from "../../types/Direction";
-import { DirectionProps } from "../../types/DirectionProps";
+} from "types";
+import { DirectionProps } from "types";
 
 const Direction = ({
   direction,

@@ -1,8 +1,8 @@
 import React from "react";
 
 import * as S from "./style";
-import Content from "../Content";
-import { ExplainProps } from "../../types/ExplainProps";
+import { Content } from "components";
+import { ExplainProps } from "types";
 
 const ExplainContainer = ({ onMouse, isHover, albeWord }: ExplainProps) => {
   return (

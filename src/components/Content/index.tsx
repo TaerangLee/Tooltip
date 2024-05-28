@@ -1,8 +1,8 @@
 import React from "react";
 
 import * as S from "./style";
-import Direction from "../Direction";
-import { ContentProps } from "../../types/ContentProps";
+import { Direction } from "components";
+import { ContentProps } from "types";
 
 const Content = ({ direction, type }: ContentProps) => {
   const directionSlice = direction?.slice(0, 1);
