@@ -7,4 +7,7 @@ export interface TooltipProps {
   type?: "enter-delay" | "leave-delay";
   content?: "check" | "color" | "able" | "scroll";
   fontColor?: string;
+  isClick?: boolean;
+  onClick?: () => void;
+  // isClick?: boolean;
 }
