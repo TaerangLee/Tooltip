@@ -61,6 +61,10 @@ Section 2는 Section1과 다를 것이 없습니다. 같은 형태지만 Section
 
 ## Section 3
 
+
+https://github.com/TaerangLee/Tooltip/assets/106226701/df778829-e9a3-4b7f-a047-1359596fc91f
+
+
 section 3에서는 delay를 할 수 있는 TooltipButton과 user가 UI 인터페이스에서 직접적인 custom이 가능합니다. 기본적으로 TooltipButton의 컴포넌트 넓이가 넓기 때문에 width를 설정해주었습니다. <유동적이라면 따로 컴포넌트 제작도 가능 ⭕️> delay할 시간을 정해줘야 합니다. 기본 `1초가 default`입니다.
 
     추가적으로 user들이 custom이 가능하도록 Input을 통해서 number를 관리하며 그 number를 통해서 delay시간을 조정할 수 있습니다.
@@ -78,6 +82,8 @@ const Timeout = useRef<NodeJS.Timeout | null>(null);
 ```
 
 ## Section 4
+
+https://github.com/TaerangLee/Tooltip/assets/106226701/e171405e-ced8-414b-bc02-80bf1bb51c3e
 
 다음 Section 4에서는 4방향으로 Content 컴포넌트를 나태는 것입니다. 여기서는 지금까지 사용했던 Content 컴포넌트가 아니라 CheckContent라 해서 yes라는 버튼을 누르면 alert를 뜨게 만듭니다. 사용되는 alert는 위에 기재하고 사용하였습니다. `toastify-alert 라이브러리` 사용되는 i 아이콘은 assets 폴더안에 svg로 저장하여 사용합니다.
 
@@ -102,6 +108,8 @@ const Timeout = useRef<NodeJS.Timeout | null>(null);
 > Direction은 colorContent일 때는 그림자 효과를 적용시킵니다.
 
 ## Section 6
+
+https://github.com/TaerangLee/Tooltip/assets/106226701/a23cdc4a-dd42-4309-9606-f9be67565991
 
 마지막 Section은 Disable과 Enable 두 가지 유형이 있습니다.<br/>
 Disable일 때는 hover를 할 때 위에 Content가 보이게 됩니다. 하지만 Enable일 때는 hover시에 보이면 안 됩니다. 유형이 able이라는 conent일 때만 onClick이 실행이 됩니다. 이러한 값에 따라서 Disable과 Enable을 union type에 정의하고
