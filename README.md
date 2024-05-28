@@ -15,8 +15,7 @@
 
 ### TooltipButton
 
-기본적인 TooltipButton 컴포넌트는 hover시에 안에 상세 내용을 띄워주는 컴포넌트입니다.<br/>
-이러한 컴포넌트는 다양한 props를 이용하여 하나로 관리합니다. 다음 아래와 같은 props가 있습니다.
+기본적인 TooltipButton 컴포넌트는 hover시에 안에 상세 내용을 띄워주는 컴포넌트입니다. 이러한 컴포넌트는 다양한 props를 이용하여 하나로 관리합니다. 다음 아래와 같은 props가 있습니다.
 
     children : 컴포넌트 안에 세부적인 내용입니다.
     width : 짧은 Tooltip인지 긴 컴포넌트인지 확인합니다. <설정을 하지 않으면 기본 값으로 짧은 컴포넌트로 인지됩니다.>
@@ -48,8 +47,7 @@ Direction과 Content로 나뉘게 됩니다.
 
 ## Section 2
 
-Section 2는 Section1과 다를 것이 없습니다. 같은 형태지만 Section1 Container 상위 태그가 overflow: hidden, scroll 등 .. 입니다.<br/>
-그러기에 scroll 안에서는 상위에 있는 태그가 보이지 않습니다. 그러기에 제가 도출해낸 방법은 2가지 였습니다.
+Section 2는 Section1과 다를 것이 없습니다. 같은 형태지만 Section1 Container 상위 태그가 overflow: hidden, scroll 등 .. 입니다. 그러기에 scroll 안에서는 상위에 있는 태그가 보이지 않습니다. 그러기에 제가 도출해낸 방법은 2가지 였습니다.
 ![Alt text](image-2.png))
 
     방법 1 : Section1의 Content 컴포넌트는 postion: relative였지만 Section2 scroll 일 때는 fixed로 고정하여 상위에 보이게 하는 방법.
@@ -61,9 +59,7 @@ Section 2는 Section1과 다를 것이 없습니다. 같은 형태지만 Section
 
 ## Section 3
 
-section 3에서는 delay를 할 수 있는 TooltipButton과 user가 UI 인터페이스에서 직접적인 custom이 가능합니다.<br/>
-기본적으로 TooltipButton의 컴포넌트 넓이가 넓기 때문에 width를 설정해주었습니다. <유동적이라면 따로 컴포넌트 제작도 가능 ⭕️><br>
-delay할 시간을 정해줘야 합니다. 기본 `1초가 default`입니다.
+section 3에서는 delay를 할 수 있는 TooltipButton과 user가 UI 인터페이스에서 직접적인 custom이 가능합니다. 기본적으로 TooltipButton의 컴포넌트 넓이가 넓기 때문에 width를 설정해주었습니다. <유동적이라면 따로 컴포넌트 제작도 가능 ⭕️> delay할 시간을 정해줘야 합니다. 기본 `1초가 default`입니다.
 
     추가적으로 user들이 custom이 가능하도록 Input을 통해서 number를 관리하며 그 number를 통해서 delay시간을 조정할 수 있습니다.
     <setTimeout을 이용하여서 delay-enter, delay-leave를 사용하였습니다.>
@@ -81,9 +77,7 @@ const Timeout = useRef<NodeJS.Timeout | null>(null);
 
 ## Section 4
 
-다음 Section 4에서는 4방향으로 Content 컴포넌트를 나태는 것입니다.<br/>
-여기서는 지금까지 사용했던 Content 컴포넌트가 아니라 CheckContent라 해서 yes라는 버튼을 누르면 alert를 뜨게 만듭니다.<br/>
-사용되는 alert는 위에 기재하고 사용하였습니다. `toastify-alert 라이브러리` 사용되는 i 아이콘은 assets 폴더안에 svg로 저장하여 사용합니다.<br/>
+다음 Section 4에서는 4방향으로 Content 컴포넌트를 나태는 것입니다. 여기서는 지금까지 사용했던 Content 컴포넌트가 아니라 CheckContent라 해서 yes라는 버튼을 누르면 alert를 뜨게 만듭니다. 사용되는 alert는 위에 기재하고 사용하였습니다. `toastify-alert 라이브러리` 사용되는 i 아이콘은 assets 폴더안에 svg로 저장하여 사용합니다.
 
     기존에 사용되는 Tooltip 컴포넌트는 onMouseLeave일 때 바로 isHover라는 state가 false가 되면서 사라집니다.
     그리고 추가적으로 CheckContent라는 컴포넌트에 따로 state에 관리하려고 하였습니다. 하지만 상위에 있는 isHover라는
@@ -99,8 +93,7 @@ const Timeout = useRef<NodeJS.Timeout | null>(null);
 ## Section 5
 
 이번 Section5는 색깔이 관한 Tooltip 컴포넌트입니다.<br/>
-기본적으로 color와 fontColor를 다양하게 설정하고 싶은 색으로 지정을 해주면 됩니다. 기본 방향은 Top 방향입니다.<br/>
-그리고 설정한 세부 내용인 `React.ReactNode` 내용이 Tooltip 컴포너트 내용과 ColorContent안에 나타나게 됩니다.
+기본적으로 color와 fontColor를 다양하게 설정하고 싶은 색으로 지정을 해주면 됩니다. 기본 방향은 Top 방향입니다. 그리고 설정한 세부 내용인 `React.ReactNode` 내용이 Tooltip 컴포너트 내용과 ColorContent안에 나타나게 됩니다.
 ![Alt text](image-3.png)
 
 > font-color를 black과 base color를 `#fff1aa`설정했습니다.
@@ -109,8 +102,7 @@ const Timeout = useRef<NodeJS.Timeout | null>(null);
 ## Section 6
 
 마지막 Section은 Disable과 Enable 두 가지 유형이 있습니다.<br/>
-Disable일 때는 hover를 할 때 위에 Content가 보이게 됩니다. 하지만 Enable일 때는 hover시에 보이면 안 됩니다.<br/>
-유형이 able이라는 conent일 때만 onClick이 실행이 됩니다. 이러한 값에 따라서 Disable과 Enable을 union type에 정의하고<br/>
+Disable일 때는 hover를 할 때 위에 Content가 보이게 됩니다. 하지만 Enable일 때는 hover시에 보이면 안 됩니다. 유형이 able이라는 conent일 때만 onClick이 실행이 됩니다. 이러한 값에 따라서 Disable과 Enable을 union type에 정의하고
 이러한 상태에 따라서 Content가 생기고 안 생기고를 판단하였습니다.
 
 ## 기타
